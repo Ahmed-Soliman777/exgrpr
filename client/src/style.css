@@ -1,0 +1,69 @@
+.login-bg-color{
+    background-color: #4e2ae4;
+}
+
+.fit-content-img{
+    height: 45rem;
+}
+
+.margin-top-5{
+    margin-top:5rem;
+}
+
+.card-size{
+    min-height: 50%;
+    width: 40%;
+}
+
+@media (max-width:1600px) and (min-width:1024px) {
+    .card-size{
+        width: 40%;
+    }
+}
+
+@media (max-width:1023px) and (min-width:769px) {
+    .card-size{
+        width: 55%;
+    }
+}
+
+@media (max-width:768px) and (min-width:551px) {
+    .card-size{
+        width: 70%;
+    }
+}
+
+@media (max-width:550px) and (min-width:446px) {
+    .card-size{
+        width: 80%;
+    }
+}
+
+@media (max-width:445px) and (min-width:376px) {
+    .card-size{
+        width: 90%;
+    }
+}
+
+@media (max-width:376px){
+    .card-size{
+        width: 100%;
+    }
+}
+
+.drop-shadow-card{
+    box-shadow: 0 15px 100px 0 #0000005b;
+}
+
+.card-bgcolor{
+    background-color: #f3f8ff;
+}
+
+.blackk{
+    background-color: #000;
+}
+
+.card-image-size{
+    min-height: 9rem;
+    min-width: 9rem;
+}
