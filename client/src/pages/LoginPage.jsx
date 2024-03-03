@@ -11,6 +11,7 @@ import '../style.css';
 import upperImage from '../assets/images/UpperLoginImg.png'
 import lowerImage from '../assets/images/LowerLoginImg.png'
 import { Button } from 'react-bootstrap';
+import CardItem from '../components/CardItem';
 
 
 // Functional component for the LoginPage
@@ -22,22 +23,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Perform login logic here based on user type
-    // For now, let's just navigate to the corresponding dashboard page
-    switch (userType) {
-      case 'student':
-        navigate('/stdDashboard');
-        break;
-      case 'professor':
-        navigate('/profDashboard');
-        break;
-      case 'admin':
-        navigate('/adminDashboard');
-        break;
-      default:
-        // Handle default case
-        break;
-    }
+
 
     // Clear input fields
     setEmail('');
@@ -62,8 +48,9 @@ const LoginPage = () => {
         alt="login-img"
         className='position-absolute bottom-0 end-0 fit-content-img' />
 
+      <CardItem />
       {/* Card component for the login form with various styling classes */}
-      <Card
+      {/* <Card
         className='card-size
         drop-shadow-card 
         rounded
@@ -74,15 +61,12 @@ const LoginPage = () => {
         rounded'
       >
         <Card.Body>
-          {/* User image position absolute on the top center of the card */}
           <img
             src=""
             alt="user-img"
             className='position-absolute top-0 start-50 translate-middle  card-image-size rounded-circle blackk '
           />
-          {/* Form for user login with email, password, and role selection */}
           <Form className='margin-top-5'>
-            {/* Email input field */}
             <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
               <Col>
                 <Form.Control
@@ -95,7 +79,6 @@ const LoginPage = () => {
               </Col>
             </Form.Group>
 
-            {/* Password input field */}
             <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
               <Col>
                 <Form.Control
@@ -108,7 +91,6 @@ const LoginPage = () => {
               </Col>
             </Form.Group>
 
-            {/* Role selection radio buttons */}
             <fieldset>
               <Form.Group as={Row} className="m-2">
                 <Col className='d-flex justify-content-around'>
@@ -136,11 +118,9 @@ const LoginPage = () => {
                 </Col>
               </Form.Group>
 
-              {/* Remember me checkbox and login button */}
               <div className='d-flex justify-content-center align-items-center flex-column m-3'>
                 <Form.Check label="Remember me" />
 
-                {/* Login button with link styling */}
                 <Button
                   type="submit"
                   onClick={handleLogin}
@@ -160,7 +140,7 @@ const LoginPage = () => {
             </fieldset>
           </Form>
         </Card.Body>
-      </Card>
+      </Card> */}
     </section>
   );
 }

@@ -3,9 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 /* importing components and pages  */
 import LoginPage from "./pages/LoginPage";
-import AdminDashBoard from "./pages/AdminDashBoard";
-import ProfDashBoard from "./pages/ProfDashBoard";
-import StudentDashBoard from "./pages/StudentDashBoard";
+import Dashboard from "./pages/Dashboard";
 /* importing components and pages  */
 
 function App() {
@@ -15,9 +13,7 @@ function App() {
         <Routes>
           {/* Route to login page */}
           <Route path="/" element={<LoginPage />} />
-          <Route path="/adminDashboard" Component={AdminDashBoard} />
-          <Route path="/profDashboard" Component={ProfDashBoard} />
-          <Route path="/stdDashboard" Component={StudentDashBoard} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
