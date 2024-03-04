@@ -14,7 +14,7 @@ const Sidebar = () => {
           <Link className='nav-link active'>Home</Link>
         </li>
         <li>
-          <Link className='nav-link link-dark'>Home</Link>
+          <Link className='nav-link link-dark'>Dashboard</Link>
 
         </li>
       </ul>
@@ -25,8 +25,6 @@ const Sidebar = () => {
           <strong>mdo</strong>
         </Link>
         <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-          <li><Link className="dropdown-item" href="#">New project...</Link></li>
-          <li><Link className="dropdown-item" href="#">Settings</Link></li>
           <li><Link className="dropdown-item" href="#">Profile</Link></li>
           <li><hr className="dropdown-divider" /></li>
           <li><Link className="dropdown-item" href="#">Sign out</Link></li>
