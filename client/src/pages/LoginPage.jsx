@@ -5,7 +5,7 @@ import './css/LoginPage.css';
 
 import upperImage from '../assets/images/UpperLoginImg.png'
 import lowerImage from '../assets/images/LowerLoginImg.png'
-import CardItem from '../components/CardItem';
+import LoginCard from '../components/LoginCard';
 
 
 // Functional component for the LoginPage
@@ -42,7 +42,7 @@ const LoginPage = () => {
         alt="login-img"
         className='position-absolute bottom-0 end-0 fit-content-img' />
 
-      <CardItem />
+      <LoginCard />
 
     </section>
   );
