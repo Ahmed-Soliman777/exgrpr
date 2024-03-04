@@ -1,16 +1,10 @@
 // Importing necessary components and styles
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
-import { ArrowRight } from 'react-bootstrap-icons';
-import '../style.css';
+import './css/LoginPage.css';
 
 import upperImage from '../assets/images/UpperLoginImg.png'
 import lowerImage from '../assets/images/LowerLoginImg.png'
-import { Button } from 'react-bootstrap';
 import CardItem from '../components/CardItem';
 
 
