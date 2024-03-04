@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/LoginPage.css';
+import '../style.css';
 
 import upperImage from '../assets/images/UpperLoginImg.png'
 import lowerImage from '../assets/images/LowerLoginImg.png'
