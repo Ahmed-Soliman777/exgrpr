@@ -36,7 +36,7 @@ const LoginPage = () => {
 
   return (
     // Section for the login page with background color and flex properties
-    <section className='login-bg-color vh-100 w-100 d-flex justify-content-center align-items-center position-relative'>
+    <section className='main-bg-color vh-100 w-100 d-flex justify-content-center align-items-center position-relative'>
 
       <img
         src={upperImage}
@@ -49,98 +49,7 @@ const LoginPage = () => {
         className='position-absolute bottom-0 end-0 fit-content-img' />
 
       <CardItem />
-      {/* Card component for the login form with various styling classes */}
-      {/* <Card
-        className='card-size
-        drop-shadow-card 
-        rounded
-        d-flex 
-        justify-content-center 
-        card-bgcolor 
-        position-relative
-        rounded'
-      >
-        <Card.Body>
-          <img
-            src=""
-            alt="user-img"
-            className='position-absolute top-0 start-50 translate-middle  card-image-size rounded-circle blackk '
-          />
-          <Form className='margin-top-5'>
-            <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-              <Col>
-                <Form.Control
-                  type="email"
-                  placeholder="Email"
-                  className='m-2 bg-transparent text-center border-0 border-bottom'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Col>
-            </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-              <Col>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  className='m-2 bg-transparent text-center border-0 border-bottom'
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </Col>
-            </Form.Group>
-
-            <fieldset>
-              <Form.Group as={Row} className="m-2">
-                <Col className='d-flex justify-content-around'>
-                  <Form.Check
-                    type="radio"
-                    label="Student"
-                    name="formHorizontalRadios"
-                    id="student"
-                    onChange={handleUserTypeChange}
-                  />
-                  <Form.Check
-                    type="radio"
-                    label="Professor"
-                    name="formHorizontalRadios"
-                    id="professor"
-                    onChange={handleUserTypeChange}
-                  />
-                  <Form.Check
-                    type="radio"
-                    label="Admin"
-                    name="formHorizontalRadios"
-                    id="admin"
-                    onChange={handleUserTypeChange}
-                  />
-                </Col>
-              </Form.Group>
-
-              <div className='d-flex justify-content-center align-items-center flex-column m-3'>
-                <Form.Check label="Remember me" />
-
-                <Button
-                  type="submit"
-                  onClick={handleLogin}
-                  className='btn
-                  btn-primary
-                  w-25 
-                  position-absolute 
-                  top-100 start-50 
-                  translate-middle 
-                  rounded-pill 
-                  text-uppercase'
-                >
-                  login
-                  <ArrowRight className='pl-5' />
-                </Button>
-              </div>
-            </fieldset>
-          </Form>
-        </Card.Body>
-      </Card> */}
     </section>
   );
 }
