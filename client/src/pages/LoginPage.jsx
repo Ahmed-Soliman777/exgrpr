@@ -55,8 +55,6 @@ const Signin = () => {
         return;
       }
 
-      // Dispatch the singInSuccess action with the response data
-      dispatch(singInSuccess(data))
 
       // Navigate to the root route
       navigate("/")
