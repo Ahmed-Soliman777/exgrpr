@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -12,10 +12,35 @@ const LoginCard = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
-    const handleLogin = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault()
 
-        navigate("/dashboard")
+        if (email === '') {
+            setEmailError('Email is required');
+        }
+        if (password === '') {
+            setPasswordError('Password is required');
+        }
+
+        // Navigate based on the selected userType
+        switch (userType) {
+            case 'student':
+                navigate('/student_dashboard');
+                break;
+            case 'professor':
+                navigate('/professor_dashboard');
+                break;
+            case 'admin':
+                navigate('/admin_dashboard');
+                break;
+            default:
+                // Handle default case or error if userType is not selected
+                break;
+        }
+
         // Clear input fields
         setEmail('');
         setPassword('');
@@ -44,7 +69,7 @@ const LoginCard = () => {
                     className='position-absolute top-0 start-50 translate-middle  card-image-size rounded-circle blackk '
                 />
                 {/* Form for user login with email, password, and role selection */}
-                <Form className='margin-top-5'>
+                <Form className='margin-top-5' onSubmit={handleSubmit}>
                     {/* Email input field */}
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                         <Col>
@@ -55,6 +80,7 @@ const LoginCard = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+                            {emailError && <div style={{ color: 'red' }}>{emailError}</div>}
                         </Col>
                     </Form.Group>
 
@@ -68,6 +94,7 @@ const LoginCard = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
+                            {passwordError && <div style={{ color: 'red' }}>{passwordError}</div>}
                         </Col>
                     </Form.Group>
 
@@ -101,12 +128,10 @@ const LoginCard = () => {
 
                         {/* Remember me checkbox and login button */}
                         <div className='d-flex justify-content-center align-items-center flex-column m-3'>
-                            <Form.Check label="Remember me" />
 
                             {/* Login button with link styling */}
                             <Button
                                 type="submit"
-                                onClick={handleLogin}
                                 className='btn
                   btn-primary
                   w-25 
@@ -124,7 +149,7 @@ const LoginCard = () => {
                 </Form>
             </Card.Body>
         </Card>
-    )
-}
+    );
+};
 
-export default LoginCard
+export default LoginCard;
