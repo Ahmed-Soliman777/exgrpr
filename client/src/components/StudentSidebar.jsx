@@ -7,8 +7,7 @@ export default function StudentSidebar() {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     const [selectedValue, setSelectedValue] = useState('');
-    const [isActive, setIsActive] = useState(false);
-
+    const [isActive, setIsActive] = useState(true);
 
     const handleLogout = (event) => {
         event.preventDefault();
@@ -36,13 +35,14 @@ export default function StudentSidebar() {
                 {/* The Link component is used to navigate to the home page.
         The active class is added to the link if it is the current page. */}
                 <li className="nav-item">
-                    <Link className='nav-link'>Home</Link>
+                    <Link className={`nav-link ${isActive ? 'active-button' : ''}`} onClick={() => setIsActive(!isActive)}>Home</Link>
                 </li>
                 <li>
-                    <Link className='nav-link link-dark'>Join An Exam</Link>
+                    <Link className={`nav-link ${isActive ? 'active-button' : ''}`} onClick={() => setIsActive(!isActive)}>Home</Link>
+
                 </li>
                 <li>
-                    <Link className='nav-link link-dark'>Exam Results</Link>
+                    <Link className={`nav-link ${isActive ? 'active-button' : ''}`} onClick={() => setIsActive(!isActive)}>Home</Link>
                 </li>
             </ul>
             <hr />
