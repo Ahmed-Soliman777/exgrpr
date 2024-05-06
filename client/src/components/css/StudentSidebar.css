@@ -1,0 +1,17 @@
+.btn-style{
+    border: transparent;
+    width: 100%;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.active-button {
+    background-color: #007bff;
+    color: white;
+  }
