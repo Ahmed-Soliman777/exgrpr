@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 /* importing components and pages  */
 import LoginPage from "./pages/LoginPage";
-import Dashboard from "./pages/Dashboard";
 import StudentDashboard from "./pages/StudentDashboard";
 import ProfessorDashboard from "./pages/ProfessorDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
